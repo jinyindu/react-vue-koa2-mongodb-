@@ -116,7 +116,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "http://118.31.47.165:3389",
+      "target": "http://127.0.0.1:3389",
       "changeOrigin": true,
       "pathRewrite": {
         "^/api": ""
