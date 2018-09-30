@@ -1,0 +1,44 @@
+{
+  "name": "blogs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "prd": "pm2 start bin/www"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "bytes": "^3.0.0",
+    "config-lite": "^2.1.0",
+    "crypto": "^1.0.1",
+    "debug": "^2.6.3",
+    "koa": "^2.2.0",
+    "koa-body": "^4.0.4",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-multer": "^1.0.2",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.1.1",
+    "koa-session": "^5.8.2",
+    "koa-session-store": "^2.0.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.10",
+    "marked": "^0.5.0",
+    "mongoose": "^5.2.4",
+    "multer": "^1.3.1",
+    "pug": "^2.0.0-rc.1",
+    "qiniu": "^7.2.1",
+    "qn": "^1.3.0",
+    "xss": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}

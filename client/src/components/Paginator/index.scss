@@ -1,0 +1,44 @@
+.page-container:after {
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.page-container {
+    zoom: 1;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+.page-container li {
+    list-style: none;
+    float: left;
+    cursor: pointer;
+    color: #40545a;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 8px;
+}
+
+.page-container li:last-child {
+    margin-right: 0px;
+}
+
+/*当前页样式*/
+.activePage {
+    color: #40545a !important;
+    background: #d8e5f3;
+    border-color: #d8e5f3 !important;
+}
+
+/*没有上一页和下一页时样式*/
+.nomore {
+    color: #b5b5b5 !important;
+    cursor: not-allowed !important;
+}
