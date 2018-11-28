@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types'
+import hljs from 'highlight';
 import { Link } from 'react-router-dom'
 import marked from 'marked'
 import dateFilter from '../../utils/dateFilter'
@@ -11,7 +12,20 @@ import './index.scss';
 
 class Detail extends React.Component{
     rawMarkup(item){
-        var rawMarkup = marked( item ? item : '<p>写点什么...</p>', { breaks:true })
+        marked.setOptions({
+			renderer: new marked.Renderer(),
+			gfm: true,
+			tables: true,
+			breaks: true,
+			pedantic: false,
+			sanitize: true,
+			smartLists: true,
+			smartypants: false,
+            highlight: function(code) {
+				return hljs.highlightAuto(code).value;
+			}
+        });
+        var rawMarkup = marked( item ? item : '<p>写点什么...</p>')
         return { __html: rawMarkup }
     }
 
